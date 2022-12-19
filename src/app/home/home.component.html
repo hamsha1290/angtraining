@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div class="container">
+  <h4 style="color: orange;">Welcome {{fullName}} !!!</h4>
+  <br>
+  <br>
+  <h4 style="color:blue">Employee Details</h4>
+  <br>
+  <div class="row">
+    <div class="col-xs-5">
+      <form>
+        <div class="row">
+          <div class="col-xs-5 form-group">
+             <label for="name">User ID</label>
+             <div class="row">
+              <div class="col-xs-12">
+                {{id}}
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5 form-group">
+            <label for="name">User Name</label>
+            <div class="row">
+              <div class="col-xs-12">
+                {{userName}}
+              </div>
+            </div>
+          </div>
+         <div class="col-xs-5 form-group">
+          <label for="name">Full Name</label>
+          <div class="row">
+            <div class="col-xs-12">
+              {{fullName}}
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-5 form-group">
+          <label for="name">Email</label>
+          <div class="row">
+            <div class="col-xs-12">
+              {{email}}
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-5 form-group">
+          <label for="name">Phone</label>
+          <div class="row">
+            <div class="col-xs-12">
+              {{phone}}
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-5 form-group">
+            <label for="amount">Webiste</label>
+            <div class="row">
+              <div class="col-xs-12">
+                {{website}}
+              </div>
+            </div>
+         </div>
+
+         <div class="col-xs-5 form-group">
+          <label for="amount">Department</label>
+          <div class="row">
+            <div class="col-xs-12">
+              Finance
+            </div>
+          </div>
+       </div>
+
+       <div class="col-xs-5 form-group">
+        <label for="amount">Date of Joining</label>
+        <div class="row">
+          <div class="col-xs-12">
+            17-09-2003
+          </div>
+        </div>
+     </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

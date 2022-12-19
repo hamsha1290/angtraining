@@ -1,0 +1,48 @@
+<div class="container">
+  <br>
+<div class="row">
+  <div class="col-xs-12">
+
+      <mat-table class="lessons-table mat-elevation-z8" [dataSource]="records"
+                 matSort matSortActive="id" matSortDirection="asc" matSortDisableClear>
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint; let i = index">{{endpoint.id}}
+            <a fxFlexFill [routerLink]="[i]" routerLinkActive="active" class="mat-row-link"></a>
+          </mat-cell>
+
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint">{{endpoint.username}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Full Name</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint">{{endpoint.name}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Email</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint">{{endpoint.email}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint">{{endpoint.phone}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="website">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Website</mat-header-cell>
+          <mat-cell *matCellDef="let endpoint">{{endpoint.website}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns" ></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns" class="row-link">
+        </mat-row>
+      </mat-table>
+    </div>
+  </div>
+
+</div>

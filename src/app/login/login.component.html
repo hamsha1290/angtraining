@@ -1,0 +1,44 @@
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+    <h1>CRUD Application with Angular</h1>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Enter Login Credentials</h3>
+  </div>
+</div>
+<br>
+<form (ngSubmit)="onLogin(f)" #f="ngForm">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-3">
+        <label>User Name </label>
+        <input type="text" id="username" name="username" class="form-control" ngModel required #username="ngModel">
+      </div>
+    </div>
+    <span class="help-block" *ngIf="!username.valid && username.touched">Plese enter valid user ID!!!</span>
+  </div>
+  <div class="form-group">
+  <div class="row">
+    <div class="col-xs-3">
+      <label>Password </label>
+      <input class="form-control" name="password" type="password" id="password" required ngModel #password="ngModel">
+    </div>
+  </div>
+  <span class="help-block" *ngIf="!password.valid && password.touched">Plese enter valid Password!!!</span>
+</div>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-2">
+      <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+  <br>
+  <p>{{msg}}</p>
+</form>
+</div>
+
